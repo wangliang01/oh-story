@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.8.0（fork：wangliang01/oh-story）
+
+> 本版本为 fork 扩展版：在 v0.7.6 基础上并入 9 个中文小说「构思 / 验证 / 学习」skill（story-conception / story-premise / story-platform / story-world / story-character / story-plot / story-qualify / story-validate / story-learn），与原有的扫榜 / 拆文 / 写作 / 去AI味 / 封面流水线组成 22 个 skill 的完整闭环。`agents_version` 维持 25，无需更新已部署 agent；skill 包本体更新后重跑 `/story-setup` 即可部署新增 skill。
+
+### 新增
+
+- **构思组（6 个）**：`story-conception`（总路由，访谈驱动产出 story-bible.md）、`story-premise`（卖点/读者/基调）、`story-platform`（平台×篇幅规则选择器 + 市场信号）、`story-world`（世界观三问）、`story-character`（主角三要素/三类配角/反派三逻辑）、`story-plot`（三层结构/冲突公式/节奏规划/情绪曲线）。
+- **验证组（2 个）**：`story-qualify`（签约级验证：5 视角子 Agent 并行评审 + 签约判定 + 调教回流）、`story-validate`（评审救场，原名 story-review——与 oh-story 自带 story-review 重名，改名以区分：本 skill 做黄金模板 8 步与八坑的模板化自检与写崩救场，story-review 做多 Agent 对抗式审查）。
+- **学习组（1 个）**：`story-learn`（语料自学习流水线：analyze-corpus.py 统计 → update-baselines.py 合并基线 → 精读提炼技法 → 校准日志）。
+- **路由与部署**：`story` 路由表、CLAUDE.md / 各端 AGENTS.md 模板、opencode/zcode commands、story-setup 部署清单与验证全部同步为 22 个 skill。
+
+### 升级须知（本版必读）
+
+```bash
+npx skills add wangliang01/oh-story -y -g
+```
+
+然后在写作项目根目录重跑 `/story-setup` 并新开一个会话，让新增的 9 个 skill 部署进项目。`setup_skill_version` 升到 1.3.0。
+
 ## v0.7.6
 
 > 这版的重点在正文那一段。写正文的专业 agent 有三条规则一直在空转：它被要求「写完必须立即统计字数」，可它的工具白名单里根本没有 Bash，那条命令跑不了，而同一句话又禁掉了唯一的替代手段——于是整个「字数达标是硬性要求」小节挂在一条无法执行的命令上；被要求「返回前报出句长分布」，同样无从计算，只能编，而主会话正拿这个数做质量校验。第三条更隐蔽：模板里「正文逐项展开细纲」是最高优先级的明令，而「可自由编排、合并穿插情节点」写在主 skill 里、从不进 spawn 提示词，子代理也不读主 skill——它只看见限制的半边，就按一个情节点一段平推成流水账。三条都已修好。同时新增细纲照搬检测：细纲把情节点写成成品散文句时，正文只剩誊抄，全章最好的几句其实在写细纲那一步就写完了，此前没有任何检测。**本版 `agents_version` 为 25**（v0.7.5 是 24），已部署的项目要重新跑 `/story-setup` 并新开会话。

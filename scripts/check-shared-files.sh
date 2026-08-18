@@ -29,10 +29,12 @@ fi
 #   are byte-identical and now guarded.
 # - AGENTS.md.tmpl / hooks.json: CLI-specific project templates differ deliberately
 #   and are validated by each CLI adapter check.
+# story-platform/references/fanqie.md 是平台规则文件，story-review/references/rubrics/fanqie.md 是番茄评分 rubric，
+# 同名不同物，均非共享副本，从比较集中剔除。
 IGNORE_NAMES="output-templates.md material-decomposition.md quality-checklist.md \
 genre-catalog.md genre-core-mechanics.md genre-readers.md \
 genre-writing-techniques.md \
-AGENTS.md.tmpl hooks.json"
+AGENTS.md.tmpl hooks.json fanqie.md"
 
 # Analyst-divergent (basename): the story-short-analyze copy intentionally prepends the
 # "## 用作拆文标尺时" analyst-lens header, so it is dropped from the comparison set; all

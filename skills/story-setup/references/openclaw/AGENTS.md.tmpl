@@ -18,6 +18,15 @@ OpenClaw 会从项目 `skills/` 目录发现 `SKILL.md`。优先通过 OpenClaw 
 | `/skill story-cover`、封面 | story-cover | 生成封面图；需要 `GPT_IMAGE_API_KEY` |
 | `/skill story-review`、审查 | story-review | 多视角审查；OpenClaw Phase 1 默认 solo/soft-fallback |
 | `/skill story-import`、导入 | story-import | 逆向导入已有小说到项目结构 |
+| `/skill story-conception`、构思 | story-conception | 构思总路由 · 访谈驱动产出 story-bible.md |
+| `/skill story-premise`、卖点 | story-premise | 卖点/读者/基调三件事 |
+| `/skill story-platform`、平台规则 | story-platform | 平台×篇幅规则选择器 |
+| `/skill story-world`、世界观 | story-world | 世界观三问与设定 |
+| `/skill story-character`、人设 | story-character | 主角三要素/配角/反派 |
+| `/skill story-plot`、情节 | story-plot | 三层结构/冲突/节奏 |
+| `/skill story-qualify`、签约验证 | story-qualify | 签约级验证 · 子 Agent 并行评审 |
+| `/skill story-validate`、评审救场 | story-validate | 模板化自检与写崩救场 |
+| `/skill story-learn`、学语料 | story-learn | 语料自学习流水线 |
 | `/skill story`、网文 | story | 工具箱路由 · 模糊意图自动分发 |
 | `/skill story-setup`、准备写书 | story-setup | 环境部署 · 多 CLI 配置入口 |
 | `/skill browser-cdp` | browser-cdp | 浏览器 CDP 工具 |
@@ -31,7 +40,7 @@ OpenClaw 会从项目 `skills/` 目录发现 `SKILL.md`。优先通过 OpenClaw 
 
 ## 文件结构
 
-- `skills/` — OpenClaw workspace skills，包含 oh-story 的 13 个 skill
+- `skills/` — OpenClaw workspace skills，包含 oh-story 的 22 个 skill
 - `拆文库/` — 拆文分析结果存放目录
 - `{书名}/正文/` — 长篇小说正文章节
 - `{书名}/正文.md` — 短篇小说正文

@@ -5,7 +5,7 @@
   },
   "metadata": {
     "description": "网络小说创作工具箱 — 扫榜、拆文、写作全流程 Claude Code skill，覆盖长篇与短篇网文",
-    "version": "0.7.6"
+    "version": "0.8.0"
   },
   "plugins": [
     {
@@ -137,6 +137,96 @@
       "category": "novel-cover",
       "keywords": ["cover", "封面", "image", "GPT-Image", "chinese"],
       "skills": ["./skills/story-cover"]
+    },
+    {
+      "name": "story-conception",
+      "description": "中文小说构思总路由。访谈驱动把想法推进为可写的 story-bible.md：卖点→读者基调→人物→情节→世界观→评审。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "novel-conception",
+      "keywords": ["conception", "outline", "premise", "构思", "卖点", "故事圣经", "chinese"],
+      "skills": ["./skills/story-conception"]
+    },
+    {
+      "name": "story-premise",
+      "description": "中文小说构思——核心卖点、读者定位、故事基调三件事。一句话卖点公式 + 盐选/番茄平台专项。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "novel-conception",
+      "keywords": ["premise", "pitch", "audience", "tone", "卖点", "基调", "chinese"],
+      "skills": ["./skills/story-premise"]
+    },
+    {
+      "name": "story-platform",
+      "description": "中文小说平台层·规则选择器。盐选/番茄 × 篇幅四档的格式/节奏/情绪/卖点规则与市场信号。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "novel-conception",
+      "keywords": ["platform", "yanxuan", "fanqie", "规则", "平台", "盐选", "番茄", "chinese"],
+      "skills": ["./skills/story-platform"]
+    },
+    {
+      "name": "story-world",
+      "description": "中文小说构思——世界观三问、力量体系自洽、细节清单。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "novel-conception",
+      "keywords": ["worldbuilding", "world", "设定", "世界观", "力量体系", "chinese"],
+      "skills": ["./skills/story-world"]
+    },
+    {
+      "name": "story-character",
+      "description": "中文小说构思——人物设计。主角三要素（欲望/缺陷/底牌）、三类配角、反派三逻辑。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "novel-conception",
+      "keywords": ["character", "persona", "人设", "人物", "主角", "反派", "chinese"],
+      "skills": ["./skills/story-character"]
+    },
+    {
+      "name": "story-plot",
+      "description": "中文小说构思——情节与结构。三层结构、四类冲突、节奏规划、情绪曲线 7:2:1、具象化。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "novel-conception",
+      "keywords": ["plot", "structure", "conflict", "pacing", "情节", "大纲", "结构", "chinese"],
+      "skills": ["./skills/story-plot"]
+    },
+    {
+      "name": "story-qualify",
+      "description": "中文小说签约级验证。5 视角子 Agent 并行评审 + 签约判定（会签/有条件签/不会签）+ 调教回流。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "novel-quality",
+      "keywords": ["qualify", "signing", "verdict", "签约", "验证", "评审", "平庸检测", "chinese"],
+      "skills": ["./skills/story-qualify"]
+    },
+    {
+      "name": "story-validate",
+      "description": "中文小说评审与救场。黄金模板 8 步与八坑自检 + 写崩定向修复。与 story-review（多 Agent 对抗审查）互补。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "novel-quality",
+      "keywords": ["validate", "review", "rescue", "评审", "救场", "自检", "chinese"],
+      "skills": ["./skills/story-validate"]
+    },
+    {
+      "name": "story-learn",
+      "description": "中文小说自学习流水线。范文/语料进 → 统计分析 → 基线库更新 → 精读提炼技法 → 校准日志。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "novel-analysis",
+      "keywords": ["corpus", "learn", "baseline", "语料", "学习", "基线", "范文", "chinese"],
+      "skills": ["./skills/story-learn"]
     }
   ]
 }

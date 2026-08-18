@@ -1,7 +1,7 @@
 {
   "name": "oh-story",
-  "version": "0.7.6",
-  "description": "网络小说创作工具箱：扫榜、拆文、写作、审查、去 AI 味和封面生成。",
+  "version": "0.8.0",
+  "description": "网络小说创作工具箱：扫榜、拆文、写作、审查、去 AI 味和封面生成（含构思/签约验证/语料学习扩展）。",
   "skills": "skills",
   "commands": "skills/story-setup/references/zcode/commands",
   "hooks": "skills/story-setup/references/zcode/hooks/hooks.json"
