@@ -15,3 +15,6 @@ skills-lock.json
 docs/plans/
 __pycache__/
 *.pyc
+
+# 语料库（story-learn 持续训练用，体积大且持续更新，不入库）
+corpus/
